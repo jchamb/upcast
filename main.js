@@ -83,7 +83,7 @@ class Upcast {
         };
         this.cast.boolean.array = val => val.length > 0;
         this.cast.boolean.string = val => {
-            if (val === 'false') {
+            if (val === 'false' || val === '0') {
                 return false;
             }
             return this.cast.boolean(val);
